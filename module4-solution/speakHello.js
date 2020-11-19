@@ -1,9 +1,9 @@
 // STEP 2: Wrap the entire contents of SpeakHello.js inside of an IIFE
 // See Lecture 52, part 2
-/**
-(function () {
+
+(function (window) {
 	var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
-}) ();
+}) (window);
 // STEP 3: Create an object, called 'helloSpeaker' to which you will attach
 // the "speak" method and which you will expose to the global context
 // See Lecture 52, part 1
@@ -26,20 +26,22 @@ helloSpeaker.sayHello = function speak(names) {
 // See Lecture 52, part 2
 // (Note, Step 6 will be done in the SpeakGoodBye.js file.)
  window.helloSpeaker = helloSpeaker;
-***/
 
-(function (window) {
-	var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
-    var helloSpeaker = {};
-    helloSpeaker.names = "Yaakov","Paul", "Frank", "Larry", "Paula", "Laura";
-    var speakWord = "Hello";
-    helloSpeaker.sayHello = function speak(names) {
-    console.log(speakWord + " " + helloSpeaker.names);
+
+
+
+//(function (window) {
+//	var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
+  //  var helloSpeaker = {};
+    //helloSpeaker.names = "Yaakov","Paul", "Frank", "Larry", "Paula", "Laura";
+   // var speakWord = "Hello";
+    //helloSpeaker.sayHello = function speak(names) {
+    //console.log(speakWord + " " + helloSpeaker.names);
   
-}
+//}
 
 
-window.helloSpeaker = helloSpeaker;
+//window.helloSpeaker = helloSpeaker;
 
-}) (window);
+//}) (window);
 
