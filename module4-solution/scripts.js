@@ -1,5 +1,5 @@
 // 
-/** START HERE IF YOU WANT AN EASIER STARTING POINT FOR THIS ASSIGNMENT
+
 // 
 //
 // Module 4 Assignment Instructions.
@@ -58,7 +58,7 @@ for (var i = 0; i < names.length; i++) {
   // name in the loop.
   if (firstLetter === 'j') {
     byeSpeaker.sayGoodBye(names[i]);
-  } else {
+   } else {
     helloSpeaker.sayHello(names[i]);
   }
 }
