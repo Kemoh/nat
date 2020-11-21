@@ -4,9 +4,17 @@
 // STEP 6: Wrap the entire contents of SpeakGoodBye.js inside of an IIFE
 // See Lecture 52, part 2
 
-//(function (window) {
-	//var names = ["John", "Jen", "Jason","Jim"];
-//}) (window);
+(function (window) {
+    
+     var byeSpeaker = {};
+      var speakWord = "Good Bye";
+      byeSpeaker.speak = function (names) {
+          console.log(speakWord + " " + names);
+};
+       
+       window.byeSpeaker = byeSpeaker;
+
+}) (window);
 
 // STEP 7: Create an object, called 'byeSpeaker' to which you will attach
 // the "speak" method and which you will expose to the global context
@@ -16,30 +24,16 @@
 
 
 // DO NOT attach the speakWord variable to the 'byeSpeaker' object.
-      //var speakWord = "Goodbye";
+      //var speakWord = "Good Bye";
 
-// STEP 8: Rewrite the 'speak' function such that it is attached to the
+// STEP 8: Rewrite the 'speak'  function such that it is attached to the
 // byeSpeaker object instead of being a standalone function.
 // See Lecture 52, part 2
-      //byeSpeaker.sayGoodbye = function Speak(names) {
+      //byeSpeaker.speak = function (names) {
       //console.log(speakWord + " " + byeSpeaker.names);
-//}
-
+//};
 // STEP 9: Expose the 'byeSpeaker' object to the global scope. Name it
-// 'byeSpeaker' on the global scope as well.
+//'byeSpeaker' on the global scope as well.
       //window.byeSpeaker = byeSpeaker;
 
 
-(function (window) {
-    var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
-    var byeSpeaker = {};
-    byeSpeaker.names =  "John", "Jen", "Jason", "Jim";
-    var speakWord = "Goodbye";
-    byeSpeaker.sayGoodbye = function speak(names) {
-    console.log(speakWord	 + " " + byeSpeaker.names);
-}
-
-    window.byeSpeaker = byeSpeaker;
-
-
-}) (window);
